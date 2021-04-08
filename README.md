@@ -1,6 +1,6 @@
 # adb-coursework
 
-## Prerequisits 
+## Prerequisites
 
 This application requires PostgreSQL and Python for it to work. Please make sure that both of these are installed before using the application.
 
