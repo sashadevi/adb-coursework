@@ -19,10 +19,13 @@ newSql = '''CREATE DATABASE CS3800;'''
 cursor.execute(newSql)
 print("Database created successfully........")
 
-dropTable = '''DROP TABLE IF EXISTS police_data;'''
+dropTable = '''DROP TABLE IF EXISTS west_midlands_data;'''
 cursor.execute(dropTable)
 
-createTable = ''' CREATE TABLE police_data (
+dropTable1 = '''DROP TABLE IF EXISTS cambridge_data;'''
+cursor.execute(dropTable1)
+
+createTable = ''' CREATE TABLE west_midlands_data (
 Crime_ID VARCHAR,
 Month VARCHAR,
 Reported_by VARCHAR,
@@ -40,13 +43,34 @@ Context VARCHAR
 cursor.execute(createTable)
 print("Created table!")
 
-f_contents = open('crime-data/2021-01/2021-01-west-midlands-street.csv', 'r')
-cursor.copy_from(f_contents, "police_data", sep=",")
-print("Data has been added!")
+midlands_data = open('crime-data/2021-01/2021-01-west-midlands-street.csv', 'r')
+cursor.copy_from(midlands_data, "west_midlands_data", sep=",")
+print("Police data for the West Midlands has been added!")
 
+createTable = ''' CREATE TABLE cambridge_data (
+Crime_ID VARCHAR,
+Month VARCHAR,
+Reported_by VARCHAR,
+Falls_within VARCHAR,
+Longitude VARCHAR,
+Latitude VARCHAR,
+Location VARCHAR, 
+LSOA_code CHAR(9), 
+LSOA_name VARCHAR,
+Crime_type VARCHAR,
+Last_outcome_category VARCHAR,
+Context VARCHAR
+); '''
 
-selectData = '''SELECT * FROM police_data; '''
-cursor.execute(selectData)
+cursor.execute(createTable)
+print("Created table!")
+
+cambridge_data = open('crime-data/2021-01/2021-01-cambridgeshire-street.csv', 'r')
+cursor.copy_from(cambridge_data, "cambridge_data", sep=",")
+print("Police data for Cambridge has been added!")
+
+# selectData = '''SELECT * FROM police_data; '''
+# cursor.execute(selectData)
 
 print("Data has been added to table!")
 
