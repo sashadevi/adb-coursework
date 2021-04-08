@@ -13,10 +13,10 @@ crime_types = input("To find out all crime types in the West Midlands and Cambri
 if crime_types == "all crime types":
 	
 	#select the different crime types from west midlands table
-	midlands_crime_types = '''SELECT DISTINCT Crime_type FROM west_midlands_data ''';
+	midlands_crime_types = '''SELECT DISTINCT Crime_type FROM west_midlands_data; '''
 
 	#select the different crime types from cambridge table
-	cambridge_crime_types = '''SELECT DISTINCT Crime_type FROM cambridge_data''';
+	cambridge_crime_types = '''SELECT DISTINCT Crime_type FROM cambridge_data;'''
 
 	#execute query
 	cursor.execute(midlands_crime_types, cambridge_crime_types)
