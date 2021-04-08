@@ -9,15 +9,15 @@ conn.autocommit = True
 #Creating a cursor object using the cursor() method
 cursor = conn.cursor()
 
-#Preparing query to create a database
-sql = '''DROP DATABASE IF EXISTS CS3800; '''
+#Preparing query to drop a database if it exists
+dropDatabase = '''DROP DATABASE IF EXISTS CS3800; '''
 
-#Creating a database
-cursor.execute(sql)
+#Drop database
+cursor.execute(dropDatabase)
 
-newSql = '''CREATE DATABASE CS3800;'''
-cursor.execute(newSql)
-print("Database created successfully........")
+createDatabase = '''CREATE DATABASE CS3800;'''
+cursor.execute(createDatabase)
+print("Database created successfully")
 
 dropTable = '''DROP TABLE IF EXISTS west_midlands_data;'''
 cursor.execute(dropTable)
@@ -41,11 +41,11 @@ Context VARCHAR
 ); '''
 
 cursor.execute(createTable)
-print("Created table!")
+print("Created table for West Midlands police data")
 
 midlands_data = open('crime-data/2021-01/2021-01-west-midlands-street.csv', 'r')
 cursor.copy_from(midlands_data, "west_midlands_data", sep=",")
-print("Police data for the West Midlands has been added!")
+print("Police data for the West Midlands has been added")
 
 createTable = ''' CREATE TABLE cambridge_data (
 Crime_ID VARCHAR,
@@ -63,16 +63,16 @@ Context VARCHAR
 ); '''
 
 cursor.execute(createTable)
-print("Created table!")
+print("Created table for Cambridge police data")
 
 cambridge_data = open('crime-data/2021-01/2021-01-cambridgeshire-street.csv', 'r')
 cursor.copy_from(cambridge_data, "cambridge_data", sep=",")
-print("Police data for Cambridge has been added!")
+print("Police data for Cambridge has been added")
 
 # selectData = '''SELECT * FROM police_data; '''
 # cursor.execute(selectData)
 
-print("Data has been added to table!")
+print("Data has been added to tables")
 
 #list_tables = cursor.fetchall()
 
