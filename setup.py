@@ -24,7 +24,7 @@ cursor.execute(dropTable)
 
 createTable = ''' CREATE TABLE police_data (
 Crime_ID VARCHAR,
-Month DATE,
+Month VARCHAR,
 Reported_by VARCHAR,
 Falls_within VARCHAR,
 Longitude DOUBLE PRECISION,
@@ -39,6 +39,20 @@ Context VARCHAR
 
 cursor.execute(createTable)
 print("Created table!")
+
+f_contents = open('crime-data/2021-01/2021-01-west-midlands-street.csv', 'r')
+cursor.copy_from(f_contents, "police_data", sep=",")
+print("Data has been added!")
+
+
+selectData = '''SELECT * FROM police_data; '''
+cursor.execute(selectData)
+
+print("Data has been added to table!")
+
+#list_tables = cursor.fetchall()
+
+#print(list_tables)
 
 #Closing the connection
 conn.close()
