@@ -9,17 +9,15 @@ conn.autocommit = True
 #creating a cursor object using the cursor() method
 cursor = conn.cursor()
 
-#select the different crime types from west midlands table
-midlands_crime_types = '''SELECT DISTINCT Crime_type FROM west_midlands_data; '''
-
-#select the different crime types from cambridge table
-cambridge_crime_types = '''SELECT DISTINCT Crime_type FROM cambridge_data;'''
+#select the different crime types from police_data
+crime_types = '''SELECT Falls_within, Crime_type FROM police_data GROUP BY Falls_within, Crime_type ORDER BY Falls_within, Crime_type; '''
 
 #execute query
-cursor.execute(midlands_crime_types, cambridge_crime_types)
+cursor.execute(crime_types)
 
 list_tables = cursor.fetchall()
 for row in list_tables:
-    print(f"{row[0]}")
+    print(f"{row[0]} {row[1]}")
 
 conn.close()
+
