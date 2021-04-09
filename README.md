@@ -16,13 +16,14 @@ pip3 install psycopg2-binary
 
 ## Setting up a database and importing datasets into a table
 
-Navigate to the root directory of the project and run the file setup.py. This creates and connects to the database, and creates a table. The police datasets for the West Midlands and Cambridge are then imported into the table.
+Navigate to the root directory of the project and run the file setup.py. This creates and connects to the database, and creates a table. <br/>
+The police datasets for the West Midlands and Cambridge are then imported into the table.
 
 ```bash
 python3 setup.py
 ```
 
-Note: You may need to specify the user, password, host and port number to establish a connection toby editing the setup.py file as follows:
+Note: You may need to specify the user, password, host and port number to establish a connection to the database, by editing the setup.py file as follows:
 
 ```python
 user=<username>, password=<password>, host=<hostname>, port=<portnumber>
