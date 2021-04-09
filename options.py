@@ -9,7 +9,7 @@ def printOptions():
     print("5. View all crimes by outcome")
 
     print("6. View all crimes by crime type and location")
-    print("7. View all crimes by crime type and outome")
+    print("7. View all crimes by crime type and outcome")
     print("8. View all crimes by location and outcome")
     print("9. View all crimes by LSOA name and outcome")
 
