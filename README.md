@@ -42,4 +42,4 @@ Once the application is running,
 
 ## Stopping the application
 
-Press ```q ``` to quit the application
+Press ``` q ```  to quit the application
