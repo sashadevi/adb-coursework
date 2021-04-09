@@ -1,6 +1,6 @@
 # adb-coursework
 
-This application compares police data during January 2021 for the West Midlands and Cambridge. 
+This application compares crime data during January 2021 for the West Midlands and Cambridge. 
 
 ## Prerequisites
 
@@ -37,4 +37,9 @@ python3 main.py
 ```
 ## Using the application
 
+Once the application is running, 
 
+
+## Stopping the application
+
+Press ```q ``` to quit the application
