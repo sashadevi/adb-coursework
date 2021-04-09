@@ -51,7 +51,6 @@ print("Police data for Cambridge has been added")
 #selectData = '''SELECT DISTINCT Falls_within, Crime_type FROM police_data; '''
 #cursor.execute(selectData)
 
-print("Data has been added to tables")
 #list_tables = cursor.fetchall()
 
 #print(list_tables)
