@@ -41,19 +41,21 @@ Once running, the commands below can be used to interact with the application: <
 
 ``` h ``` to view all possible query options <br/>
 ``` 1 ``` view all crime types <br/>
-``` 2 ``` view all crimes by crime type <br/>
-``` 3 ``` view all crimes by location <br/>
-``` 4 ``` view all crimes by LSOA name <br/>
-``` 5 ``` view all crimes by outcome <br/>
-``` 6 ``` view all crimes by crime type and location <br/>
-``` 7 ``` view all crimes by crime type and outcome <br/>
-``` 8 ``` view all crimes by location and outcome <br/>
-``` 9 ``` view all crimes by LSOA name and outcome <br/>
-``` 10 ``` view all crimes by crime type, location and LSOA name <br/>
-``` 11 ``` view all crimes by crime type, location and outcome <br/>
-``` 12 ``` view all crimes by crime type, LSOA name and outcome <br/>
-``` 13 ``` view all crimes by location, LSOA name and outcome <br/>
-``` 14 ``` view all crimes by crime type, location, LSOA name and outcome <br/>
+``` 2 ``` view crimes by crime type <br/>
+``` 3 ``` view crimes by location <br/>
+``` 4 ``` view crimes by LSOA name <br/>
+``` 5 ``` view crimes by outcome <br/>
+``` 6 ``` view crimes by crime type and location <br/>
+``` 7 ``` view crimes by crime type and outcome <br/>
+``` 8 ``` view crimes by location and outcome <br/>
+``` 9 ``` view crimes by LSOA name and outcome <br/>
+``` 10 ``` view crimes by crime type, location and LSOA name <br/>
+``` 11 ``` view crimes by crime type, location and outcome <br/>
+``` 12 ``` view crimes by crime type, LSOA name and outcome <br/>
+``` 13 ``` view crimes by location, LSOA name and outcome <br/>
+``` 14 ``` view crimes by crime type, location, LSOA name and outcome <br/>
+
+Commands 2 - 9 provide the option to enter input fields to filter the data, or to leave this empty and retrieve all data. <br/>
 
 ## Stopping the application
 
