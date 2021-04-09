@@ -18,7 +18,7 @@ cursor = conn.cursor()
 
 keyWord = ''
 
-print("Welcome, this application compares police data for the West Midlands and Cambridge for January 2021")
+print("Welcome, this application compares police data in January 2021 for the West Midlands and Cambridge")
 while keyWord != 'q':
 
     keyWord = input("Please enter an option. If you would like to see all options press 'h'. If you want to quit, press 'q': ")
