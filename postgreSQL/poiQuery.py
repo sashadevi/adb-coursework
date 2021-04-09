@@ -16,7 +16,10 @@ findCrimeTypeCambridge = ''' SELECT DISTINCT Crime_type FROM cambridge_data WHER
 cursor.execute(findCrimeType, findCrimeTypeCambridge)
 
 list_tables = cursor.fetchall()
-print(list_tables)
+print("The different types of crimes near this point of interest are:")
+for row in list_tables:
+    print(f"{row[0]}")
+
 
 
 conn.close()

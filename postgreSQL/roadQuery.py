@@ -16,13 +16,18 @@ if city == "WM":
     findCrimeType = ''' SELECT DISTINCT Crime_type FROM west_midlands_data WHERE Location = 'On or near ''' + road + '''' ;'''
     cursor.execute(findCrimeType)
     list_tables = cursor.fetchall()
-    print(list_tables)
+    print("The crime types near this road are:")
+    for row in list_tables:
+        print(f"{row[0]}")
+
 elif city=="C":
     road = input("Please enter a road: ")
     findCrimeType = ''' SELECT DISTINCT Crime_type FROM cambridge_data WHERE Location = 'On or near ''' + road + '''' ;'''
     cursor.execute(findCrimeType)
     list_tables = cursor.fetchall()
-    print(list_tables)
+    print("The crime types near this road are:")
+    for row in list_tables:
+        print(f"{row[0]}")
 else:
     print("Sorry, you did not enter a valid location")
 

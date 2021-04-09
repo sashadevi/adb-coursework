@@ -18,16 +18,8 @@ cambridge_crime_types = '''SELECT DISTINCT Crime_type FROM cambridge_data;'''
 #execute query
 cursor.execute(midlands_crime_types, cambridge_crime_types)
 
-list_crime_types = cursor.fetchall()
-print(list_crime_types)
+list_tables = cursor.fetchall()
+for row in list_tables:
+    print(f"{row[0]}")
 
-
-
-
-
-
-
-
-
-
-
+conn.close()

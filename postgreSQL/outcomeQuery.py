@@ -16,6 +16,8 @@ select_outcome_category1= "SELECT MAX(Last_outcome_category) FROM cambridge_data
 cursor.execute(select_outcome_category, select_outcome_category1)
 
 list_tables = cursor.fetchall()
-print(list_tables)
+for row in list_tables:
+    print("The most popular outcome type for this crime is: " + f"{row[0]}")
+
 
 conn.close()
