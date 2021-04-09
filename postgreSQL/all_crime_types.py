@@ -9,15 +9,15 @@ conn.autocommit = True
 #creating a cursor object using the cursor() method
 cursor = conn.cursor()
 
-#select the different crime types from police_data
-crime_types = '''SELECT Falls_within, Crime_type FROM police_data GROUP BY Falls_within, Crime_type ORDER BY Falls_within, Crime_type; '''
+def allCrimeTypes():
+   #select the different crime types from police_data
+   crime_types = '''SELECT Falls_within, Crime_type FROM police_data GROUP BY Falls_within, Crime_type ORDER BY Falls_within, Crime_type; '''
 
-#execute query
-cursor.execute(crime_types)
+   #execute query
+   cursor.execute(crime_types)
 
-list_tables = cursor.fetchall()
-for row in list_tables:
-    print(f"{row[0]} {row[1]}")
+   list_tables = cursor.fetchall()
+   for row in list_tables:
+      print(f"{row[0]} {row[1]}")
 
-conn.close()
 

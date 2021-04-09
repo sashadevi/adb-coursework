@@ -68,9 +68,3 @@ def crimesByLSOAOutcome(lsoa, outcome):
 	for row in list_tables:
 		print(f"{row[0]} {row[1]} {row[2]} {row[3]}")
 
-
-# crimesByCrimeTypeLocation()
-# crimesByTypeOutcome()
-# crimesByLocationOutcome()
-# crimesByLSOAOutcome()
-

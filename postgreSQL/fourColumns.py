@@ -40,8 +40,3 @@ def locationLSOAOutcome():
 	for row in list_tables:
 		print(f"{row[0]} {row[1]} {row[2]} {row[3]} {row[4]}")
 
-crimesByCrimeTypeLocationLSOA()
-crimesByCrimeTypeLSOAOutcome()
-crimesByCrimeTypeLSOAOutcome()
-locationLSOAOutcome()
-

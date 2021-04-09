@@ -53,9 +53,3 @@ def crimesByOutcome(outcome):
     list_tables = cursor.fetchall()
     for row in list_tables:
         print(f"{row[0]} {row[1]} {row[2]}")
-
-#crimesByCrimeType()
-# crimesByLocation()
-# crimesByLSOA()
-# crimesByOutcome()
-
