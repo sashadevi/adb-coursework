@@ -19,35 +19,10 @@ createDatabase = '''CREATE DATABASE CS3800;'''
 cursor.execute(createDatabase)
 print("Database created successfully")
 
-dropTable = '''DROP TABLE IF EXISTS west_midlands_data;'''
+dropTable = '''DROP TABLE IF EXISTS police_data;'''
 cursor.execute(dropTable)
 
-dropTable1 = '''DROP TABLE IF EXISTS cambridge_data;'''
-cursor.execute(dropTable1)
-
-createTable = ''' CREATE TABLE west_midlands_data (
-Crime_ID VARCHAR,
-Month VARCHAR,
-Reported_by VARCHAR,
-Falls_within VARCHAR,
-Longitude DOUBLE PRECISION,
-Latitude DOUBLE PRECISION,
-Location VARCHAR, 
-LSOA_code CHAR(9), 
-LSOA_name VARCHAR,
-Crime_type VARCHAR,
-Last_outcome_category VARCHAR,
-Context VARCHAR
-); '''
-
-cursor.execute(createTable)
-print("Created table for West Midlands police data")
-
-midlands_data = open('crime-data/2021-01/2021-01-west-midlands-street.csv', 'r')
-cursor.copy_from(midlands_data, "west_midlands_data", sep=",")
-print("Police data for the West Midlands has been added")
-
-createTable = ''' CREATE TABLE cambridge_data (
+createTable = ''' CREATE TABLE police_data (
 Crime_ID VARCHAR,
 Month VARCHAR,
 Reported_by VARCHAR,
@@ -63,17 +38,20 @@ Context VARCHAR
 ); '''
 
 cursor.execute(createTable)
-print("Created table for Cambridge police data")
+print("Created table for police data")
+
+midlands_data = open('crime-data/2021-01/2021-01-west-midlands-street.csv', 'r')
+cursor.copy_from(midlands_data, "police_data", sep=",")
+print("Police data for the West Midlands has been added")
 
 cambridge_data = open('crime-data/2021-01/2021-01-cambridgeshire-street.csv', 'r')
-cursor.copy_from(cambridge_data, "cambridge_data", sep=",")
+cursor.copy_from(cambridge_data, "police_data", sep=",")
 print("Police data for Cambridge has been added")
 
-# selectData = '''SELECT * FROM police_data; '''
-# cursor.execute(selectData)
+#selectData = '''SELECT DISTINCT Falls_within, Crime_type FROM police_data; '''
+#cursor.execute(selectData)
 
 print("Data has been added to tables")
-
 #list_tables = cursor.fetchall()
 
 #print(list_tables)
