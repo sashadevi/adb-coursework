@@ -40,7 +40,7 @@ python3 main.py
 
 Once running, the commands below can be used to interact with the application: <br/>
 
-``` h ``` to view all possible query options <br/>
+``` h ``` view all possible query options <br/>
 ``` 1 ``` view all crime types <br/>
 ``` 2 ``` view crimes by crime type <br/>
 ``` 3 ``` view crimes by location <br/>
