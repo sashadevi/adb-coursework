@@ -27,39 +27,39 @@ while keyWord != 'q':
         allCrimeTypes()
 
     elif keyWord == "2":
-        crime_type = input("Please enter the crime type. Press 'enter' if you would like to view all crimes by crime type: ")
+        crime_type = input("Please enter the crime type. Press 'enter' if you would like to view crimes by all crime types: ")
         crimesByCrimeType(crime_type)
 
     elif keyWord == "3":
-        location = input("Please enter a Point of Interest. Press 'enter' if you would like to view all crimes by Points of Interest: ")
+        location = input("Please enter a Point of Interest. Press 'enter' if you would like to view crimes by all Points of Interest: ")
         crimesByLocation(location)
 
     elif keyWord == "4":
-        lsoa_name = input("Please enter a LSOA name. Press 'enter' if you would like to view all crimes by LSOA name: ")
+        lsoa_name = input("Please enter a LSOA name. Press 'enter' if you would like to view crimes by all LSOA names: ")
         crimesByLSOA(lsoa_name)
 
     elif keyWord == "5":
-        outcome = input("Please enter an outcome category. Press 'enter' if you would like to view all crimes by outcome category: ")
+        outcome = input("Please enter an outcome category. Press 'enter' if you would like to view crimes by all outcome categories: ")
         crimesByOutcome(outcome)
 
     elif keyWord == "6":
-        location = input("Please enter a location. Press 'enter' if you would like to view all locations: ")
-        crime_type = input("Please enter crime type. Press 'enter' if you would like to view all crime types: ")
+        location = input("Please enter a location. Press 'enter' if you would like to view crimes by all locations: ")
+        crime_type = input("Please enter crime type. Press 'enter' if you would like to view crimes by all crime types: ")
         crimesByCrimeTypeLocation(crime_type, location)
 
     elif keyWord == "7":
-        crime_type = input("Please enter crime type. Press 'enter' if you would like to view all crime types: ")
-        outcome = input("Please enter an outcome category. Press 'enter' if you would like to view all outcomes: ")
+        crime_type = input("Please enter crime type. Press 'enter' if you would like to view crimes by all crime types: ")
+        outcome = input("Please enter an outcome category. Press 'enter' if you would like to view crimes by all outcomes: ")
         crimesByTypeOutcome(crime_type, outcome)
 
     elif keyWord == "8":
-        location = input("Please enter a location. Press 'enter' if you would like to view all locations: ")
-        outcome = input("Please enter an outcome category. Press 'enter' if you would like to view all outcomes: ")
+        location = input("Please enter a location. Press 'enter' if you would like to view crimes by all locations: ")
+        outcome = input("Please enter an outcome category. Press 'enter' if you would like to view crimes by all outcomes: ")
         crimesByLocationOutcome(location, outcome)
 
     elif keyWord == "9":
-        outcome = input("Please enter an outcome category. Press 'enter' if you would like to view all outcomes: ")
-        lsoa = input("Please enter a LSOA name. Press 'enter' if you would like to view all LSOA names: ")
+        outcome = input("Please enter an outcome category. Press 'enter' if you would like to view crimes by all outcomes: ")
+        lsoa = input("Please enter a LSOA name. Press 'enter' if you would like to view crimes by all LSOA names: ")
         crimesByLSOAOutcome(lsoa, outcome)
 
     elif keyWord == "10":
